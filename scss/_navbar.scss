@@ -1,0 +1,55 @@
+.navbar {
+    background-color: var(--white);
+    position: fixed;
+    top: 0%;
+    left: 250px;
+    z-index: 2;
+    width: calc(100% - 250px);
+    transition: all 0.2s ease-in-out;
+    box-shadow: var(--boxShadow);
+
+    &.active {
+        width: calc(100% - 84px);
+        left: 84px;
+    }
+
+    svg {
+        fill: var(--gray);
+    }
+
+    .nav-content {
+        height: 79px;
+        margin-left: -1rem;
+        margin-right: -0.8rem;
+
+        .toggle {
+            cursor: pointer;
+            padding: 1rem
+        }
+
+        .links {
+            ul {
+                li {
+                    a {
+                        padding: .5rem 0.8rem;
+
+                        &.notification {
+                            position: relative;
+
+                            span {
+                                position: absolute;
+                                top: -6px;
+                                right: 0;
+                                background-color: var(--red300);
+                                color: var(--white);
+                                font-size: 10px;
+                                border-radius: 8px;
+                                padding: .1rem .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

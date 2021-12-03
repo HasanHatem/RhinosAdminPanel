@@ -1,0 +1,210 @@
+.state-card {
+    background-color: var(--white);
+    border-radius: 0.25rem;
+    color: var(--white);
+    padding: 1rem 1rem 0 1rem;
+    box-shadow: var(--boxShadow);
+
+    .top {
+        align-items: flex-start;
+        margin-bottom: .5rem;
+
+        .icon {
+            position: relative;
+            align-items: flex-start;
+
+            svg {
+                fill: var(--white);
+                width: 20px;
+                height: 23px;
+            }
+            
+            span {
+                cursor: pointer;
+                display: inline-block;
+                margin-left: .3rem;
+                svg {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    
+        h4 {
+            margin: 0;
+            margin-bottom: .4rem;
+            font-weight: 500;
+        }
+    
+        p {
+            font-size: 14px;
+        }
+    }
+
+    &.blue-card-700 {
+        background: rgb(31,20,154);
+        background: linear-gradient(216deg, rgba(31,20,154,1) 0%, rgba(49,30,215,1) 100%);
+    }
+
+    &.blue-card-300 {
+        background: rgb(47,131,205);
+        background: linear-gradient(216deg, rgba(47,131,205,1) 0%, rgba(57,152,254,1) 100%);
+    }
+
+    &.orange-card {
+        background: rgb(246,150,11);
+        background: linear-gradient(216deg, rgba(246,150,11,1) 0%, rgba(249,192,82,1) 100%);
+    }
+
+    &.red-card {
+        background: rgb(217,56,56);
+        background: linear-gradient(216deg, rgba(217,56,56,1) 0%, rgba(229,82,82,1) 100%);
+    }
+}
+
+.dashboard-chart-content {
+    .head {
+        align-items: flex-start;
+        
+        .head-title {
+            h4 {
+                margin: 0 0 0.3rem 0;
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 15px;
+                color: var(--gray400);
+            }
+        }
+    }
+
+    .chart-options {
+        ul {
+            border: 1px solid var(--gray);
+            border-radius: 0.25rem;
+            overflow: hidden;
+
+            li {
+                a {
+                    display: block;
+                    font-size: 14px;
+                    color: var(--gray400);
+                    padding: .7rem;
+
+                    &.active {
+                        background-color: var(--gray500);
+                        color: var(--gray600);
+                        font-weight: bold;
+                    }
+
+                    svg {
+                        width: 24px;
+                        height: 19px;
+                    }
+
+                    &.a-svg {
+                        padding: 0.481rem 0.7rem;
+                        background-color: var(--secondaryColor);
+
+                        svg {
+                            fill: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.stats {
+    text-align: center;
+
+    .stats-head {
+        color: var(--gray600);
+        font-size: 14px;
+        margin-bottom: 0.3rem;
+    }
+
+    .stats-info {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 0.1rem;
+    }
+
+    .bar {
+        progress {
+            border-radius: 0;
+            height: 4px;
+
+            &::-webkit-progress-bar {
+                background-color: var(--gray200);
+            }
+            &::-moz-progress-bar {
+                background-color: var(--gray200);
+            }
+        }
+        &.green-bar {
+            progress {
+                &::-webkit-progress-value {
+                    background-color: #3cb85c;
+                }
+                &::-moz-progress-value {
+                    background-color: #3cb85c;
+                }
+            }
+        }
+        &.blue-bar {
+            progress {
+                &::-webkit-progress-value {
+                    background-color: #3d9bff;
+                }
+                &::-moz-progress-value {
+                    background-color: #3d9bff;
+                }
+            }
+        }
+        &.orange-bar {
+            progress {
+                &::-webkit-progress-value {
+                    background-color: #f8b21b;
+                }
+                &::-moz-progress-value {
+                    background-color: #f8b21b;
+                }
+            }
+        }
+        &.red-bar {
+            progress {
+                &::-webkit-progress-value {
+                    background-color: #e55353;
+                }
+                &::-moz-progress-value {
+                    background-color: #e55353;
+                }
+            }
+        }
+        &.darkblue-bar {
+            progress {
+                &::-webkit-progress-value {
+                    background-color: #3624dc;
+                }
+                &::-moz-progress-value {
+                    background-color: #3624dc;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dashboard-chart-content {
+        .head {
+            flex-direction: column;
+
+            .head-title {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
